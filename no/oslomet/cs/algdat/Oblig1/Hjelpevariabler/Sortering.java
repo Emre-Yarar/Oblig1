@@ -1,4 +1,4 @@
-package Hjelpevariabler;
+package no.oslomet.cs.algdat.Oblig1.Hjelpevariabler;
 
 public class Sortering {
 

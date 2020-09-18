@@ -2,8 +2,7 @@ package no.oslomet.cs.algdat.Oblig1;
 // Emre Yarar s314635
 ////// Løsningsforslag Oblig 1 ////////////////////////
 
-import Hjelpevariabler.Sortering;
-
+import no.oslomet.cs.algdat.Oblig1.Hjelpevariabler.Sortering;
 import java.util.ArrayList;
 
 
@@ -11,6 +10,7 @@ public class Oblig1 {
 
     private Oblig1() {
     }
+
 
     ///// Oppgave 1 //////////////////////////////////////
     public static int maks(int[] a) {
@@ -30,6 +30,12 @@ public class Oblig1 {
             }
         }
         return a[a.length - 1];
+
+        /*
+        * Det blir flest ombyttinger i tabbelen når tallene er i synkende rekkefølge, her vil man bytte om for hver iterasjon
+        * Det blir ingen / færrest ombyttinger når tabellen allerede er sortert i stigende rekkefølge.
+        * */
+
     }
 
 
@@ -128,6 +134,8 @@ public class Oblig1 {
 
     }
 
+
+
     ///// Oppgave 4 //////////////////////////////////////
     public static void delsortering(int[] a) {
 
@@ -178,13 +186,62 @@ public class Oblig1 {
     ///// Oppgave 7 //////////////////////////////////////
     /// 7a)
     public static String flett(String s, String t) {
-        throw new UnsupportedOperationException();
+
+        StringBuilder flett = new StringBuilder();
+
+        int lengde = (Math.max(s.length(), t.length()));
+
+        for(int i = 0; i < lengde; i++) {
+
+            if (i < s.length()) {
+
+                flett.append(s.charAt(i));
+
+            }
+
+            if (i < t.length()) {
+
+                flett.append(t.charAt(i));
+
+            }
+
+        }
+
+        return flett.toString();
+
     }
 
     /// 7b)
     public static String flett(String... s) {
-        throw new UnsupportedOperationException();
-    }
+
+        int lengde = 0;
+
+        StringBuilder flett = new StringBuilder();
+
+        for (String strenger : s) {
+
+            if (strenger.length() > lengde) {
+
+                lengde = strenger.length();
+
+            }
+        }
+
+            for (int i = 0; i < lengde; i++) {
+
+                for (String strengerT : s) {
+
+                    if (strengerT.length() > i) {
+                        flett.append(strengerT, i, i + 1);
+                    }
+
+                }
+
+            }
+
+            return flett.toString();
+        }
+
 
     ///// Oppgave 8 //////////////////////////////////////
     public static int[] indekssortering(int[] a) {

@@ -8,5 +8,5 @@ Oppgaven er levert av følgende studenter:
 
 I oppgaven har vi hatt følgende arbeidsfordeling:
 
-* Emre har hatt hovedansvar for oppgave 1, 2, 3, 4, 5. 
+* Emre har hatt hovedansvar for oppgave 1, 2, 3, 4, 5 og 7. 
 
